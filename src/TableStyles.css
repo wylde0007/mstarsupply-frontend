@@ -1,0 +1,174 @@
+.table-section {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    padding: 32px;
+    border-radius: 20px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease, transform 0.3s ease;
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  .table-section:hover {
+    transform: translateY(-4px);
+  }
+  
+  .table-section h2 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #1d1d1f;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s ease;
+  }
+  
+  .filter-section {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+  
+  .filter-section label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #6e6e73;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s ease;
+  }
+  
+  .filter-section input {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #d2d2d7;
+    border-radius: 8px;
+    background-color: #f5f5f7;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .filter-section input:focus {
+    outline: none;
+    border-color: #007aff;
+    background-color: #ffffff;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  }
+  
+  thead {
+    background: #f5f5f7;
+  }
+  
+  th, td {
+    padding: 12px 16px;
+    text-align: left;
+    font-size: 14px;
+    color: #1d1d1f;
+    transition: color 0.3s ease;
+  }
+  
+  th {
+    font-weight: 600;
+    color: #6e6e73;
+    transition: color 0.3s ease;
+  }
+  
+  tbody tr {
+    border-bottom: 1px solid #e5e5ea;
+  }
+  
+  tbody tr:last-child {
+    border-bottom: none;
+  }
+  
+  tbody tr:hover {
+    background: #f0f0f2;
+  }
+  
+  /* Modo Escuro */
+  .app-container.dark-mode .table-section {
+    background: rgba(44, 44, 46, 0.9);
+  }
+  
+  .app-container.dark-mode .table-section h2 {
+    color: #ffffff;
+  }
+  
+  .app-container.dark-mode .filter-section label {
+    color: #d2d2d7;
+  }
+  
+  .app-container.dark-mode .filter-section input {
+    background-color: #3a3a3c;
+    border-color: #505050;
+    color: #ffffff;
+  }
+  
+  .app-container.dark-mode .filter-section input:focus {
+    background-color: #2c2c2e;
+    border-color: #007aff;
+  }
+  
+  .app-container.dark-mode table {
+    background: rgba(44, 44, 46, 0.95);
+  }
+  
+  .app-container.dark-mode thead {
+    background: #3a3a3c;
+  }
+  
+  .app-container.dark-mode th {
+    color: #d2d2d7;
+  }
+  
+  .app-container.dark-mode td {
+    color: #ffffff;
+  }
+  
+  .app-container.dark-mode tbody tr {
+    border-bottom: 1px solid #3a3a3c;
+  }
+  
+  .app-container.dark-mode tbody tr:hover {
+    background: #505050;
+  }
+  
+  /* Animação de Fade-In */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+    .table-section {
+      padding: 20px;
+    }
+  
+    .table-section h2 {
+      font-size: 20px;
+    }
+  
+    th, td {
+      font-size: 12px;
+      padding: 10px;
+    }
+  
+    .filter-section input {
+      font-size: 12px;
+      padding: 8px;
+    }
+  }

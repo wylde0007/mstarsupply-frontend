@@ -1,0 +1,215 @@
+.app-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #f5f5f7 0%, #e5e5ea 100%);
+  min-height: 100vh;
+  transition: background 0.3s ease;
+}
+
+.app-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  margin-bottom: 50px;
+}
+
+.app-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  padding: 10px 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-center {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-grow: 1;
+}
+
+.nav-center a {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #1d1d1f;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-center a:hover {
+  color: #6e6e73;
+}
+
+.nav-icon {
+  font-size: 14px;
+  opacity: 0.8;
+  transition: color 0.3s ease;
+}
+
+.nav-right a {
+  color: #1d1d1f;
+  transition: color 0.3s ease;
+}
+
+.nav-right a:hover {
+  color: #6e6e73;
+}
+
+.nav-icon-right {
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.theme-toggle {
+  padding: 8px;
+  font-size: 16px;
+  color: #1d1d1f;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.1);
+}
+
+.app-main {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.form-section {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  padding: 32px;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s ease, transform 0.3s ease;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.form-section:hover {
+  transform: translateY(-4px);
+}
+
+.form-section h2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #1d1d1f;
+  margin-bottom: 24px;
+  transition: color 0.3s ease;
+}
+
+/* Modo Escuro */
+.app-container.dark-mode {
+  background: linear-gradient(135deg, #1c2526 0%, #2c2c2e 100%);
+}
+
+.app-container.dark-mode .app-nav {
+  background: rgba(44, 44, 46, 0.8);
+}
+
+.app-container.dark-mode .nav-center a {
+  color: #ffffff;
+}
+
+.app-container.dark-mode .nav-center a:hover {
+  color: #d2d2d7;
+}
+
+.app-container.dark-mode .nav-icon {
+  color: #ffffff;
+}
+
+.app-container.dark-mode .nav-right a {
+  color: #ffffff;
+}
+
+.app-container.dark-mode .nav-right a:hover {
+  color: #d2d2d7;
+}
+
+.app-container.dark-mode .nav-icon-right {
+  color: #ffffff;
+}
+
+.app-container.dark-mode .theme-toggle {
+  color: #ffffff;
+}
+
+.app-container.dark-mode .form-section {
+  background: rgba(44, 44, 46, 0.9);
+}
+
+.app-container.dark-mode .form-section h2 {
+  color: #ffffff;
+}
+
+/* Animação de Fade-In */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .app-container {
+    padding: 20px 10px;
+  }
+
+  .app-nav {
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .nav-center {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .nav-center a {
+    font-size: 12px;
+  }
+
+  .nav-icon {
+    font-size: 12px;
+  }
+
+  .nav-icon-right {
+    font-size: 14px;
+  }
+
+  .theme-toggle {
+    font-size: 14px;
+  }
+
+  .form-section {
+    padding: 20px;
+  }
+
+  .form-section h2 {
+    font-size: 20px;
+  }
+}
